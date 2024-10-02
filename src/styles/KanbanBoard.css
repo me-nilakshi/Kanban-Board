@@ -1,0 +1,113 @@
+.kanban-board {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.kanban-controls {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.display-container {
+  position: relative;
+}
+
+.display-button {
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.display-button:focus {
+  outline: none;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 100;
+}
+
+.dropdown-item {
+  margin-bottom: 10px;
+}
+
+/* Aligning label and dropdown on the same line */
+.dropdown-item-row {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-item-row label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.dropdown-item-row select {
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+}
+
+.dropdown-item-row select:focus {
+  outline: none;
+}
+
+.dropdown-item:last-child {
+  margin-bottom: 0;
+}
+
+.kanban-columns {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.kanban-column {
+  flex: 1;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+.kanban-column h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.display-button::after {
+  content: '';
+  display: inline-block;
+  margin-left: 10px;
+  width: 8px;
+  height: 8px;
+  background-image: url('../images/54785.png'); /* Replace with your icon path */
+  background-size: cover;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
+}
+
+.display-button.active::after {
+  transform: rotate(180deg); /* Rotate the arrow when dropdown is visible */
+}

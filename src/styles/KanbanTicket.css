@@ -1,0 +1,23 @@
+/* src/styles/KanbanTicket.css */
+.kanban-ticket {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.ticket-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ticket-body p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.kanban-ticket:hover {
+  background-color: #f0f0f0;
+}
